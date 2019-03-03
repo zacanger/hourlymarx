@@ -1,11 +1,3 @@
-# hourlymarx
-
-<https://twitter.com/hourlymarx>
-
-Based on the 'starter twitter bot'
-
-----
-
 starter twitter bot!
 =====================
 

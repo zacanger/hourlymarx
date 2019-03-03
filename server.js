@@ -20,13 +20,16 @@ const generateStatus = () =>
   quotes[~~(Math.random() * quotes.length)]
 
 // use uptimerobot to hit this endpoint every 60 minutes to tweet
-app.all('/tweet', (request, response) => {
+app.all('/tweet', (req, res) => {
   twitInstance.post(
     'statuses/update',
     { status: generateStatus() },
     (err, data, response) => {
-      if (err){
+      if (err) {
         console.error(err)
+        res.status(500).send(err)
+      } else {
+        res.status(200).send('ok')
       }
     })
 })
