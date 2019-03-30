@@ -1,25 +1,20 @@
 {
   "name": "hourlymarx",
-  "version": "0.0.1",
   "description": "Hourly Marx quotes",
-  "main": "server.js",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "main": "index.js",
   "scripts": {
     "start": "node server.js"
-  },
-  "dependencies": {
-    "express": "4.16.4",
-    "twit": "2.2.11"
-  },
-  "engines": {
-    "node": "8.x"
   },
   "repository": {
     "url": "https://github.com/zacanger/hourlymarx"
   },
-  "license": "MIT",
-  "keywords": [
-    "node",
-    "glitch",
-    "express"
-  ]
+  "dependencies": {
+    "twit": "2.2.11"
+  },
+  "engines": {
+    "node": "8.x"
+  }
 }
