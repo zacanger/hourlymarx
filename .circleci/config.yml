@@ -20,7 +20,7 @@ commands:
             - node_modules
 
 jobs:
-  gist:
+  marx:
     <<: *defaults
     steps:
       - install
@@ -31,15 +31,15 @@ workflows:
 
   test:
     jobs:
-      - gist
+      - marx
 
   poll:
     triggers:
       - schedule:
-          cron: "0 0 * * *"
+          cron: "0 * * * *"
           filters:
             branches:
               only:
                 - master
     jobs:
-      - gist
+      - marx
